@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="four_ws_navigation" name="four_ws_navigation_node" type="four_ws_navigation.py" output="screen"/>
+</launch>

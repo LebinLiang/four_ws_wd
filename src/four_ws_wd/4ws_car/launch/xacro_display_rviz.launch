@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="$(find 4ws_car)/robots/fourth_robot.xacro"/>
+  <arg name="gui" default="true" />
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+  <param
+    name="use_gui"
+    value="$(arg gui)" />
+  <!--运行joint_state_publisher节点，发布机器人关节状态-->
+  <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find 4ws_car)/config/4ws_car.rviz" />
+</launch>

@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="sensor_imu" name="imu_update" type="imu_update_simulation.py" output="screen"/>
+</launch>

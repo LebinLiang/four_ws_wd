@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!--load controller -->
+  <include file="$(find taurus_control)/launch/taurus_control.launch">
+  </include>
+
+  <!--运行gazebo仿真环境-->
+  <include file="$(find 4ws_car)/launch/gazebo.launch">
+  </include>
+  <!--仿真定位环境-->
+  <include file="$(find robot_launch)/launch/launch_location_simulation.launch">
+  </include>
+   <!--可视化RVIZ-->
+  <include file="$(find 4ws_car)/launch/display_rviz.launch">
+  </include>
+
+  <!--include file="$(find fourws_viz)/launch/fourws_viz.launch"/-->
+
+</launch>

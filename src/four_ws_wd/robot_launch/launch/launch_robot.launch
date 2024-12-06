@@ -1,0 +1,30 @@
+<launch>
+
+  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="model" default="$(find 4ws_car)/robots/fourth_robot.xacro"/>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="True"/>
+  <arg name="gui" default="false"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+    
+  <node pkg="taurus_control" type="fourws_motion_solve" name="fourws_motion_solve" output="screen">
+  </node>
+ 
+   <node pkg="taurus_control" type="joint_state_update" name="joint_state_update" output="screen">
+  </node>
+ 
+      <!-- 运行robot_state_publisher节点，发布tf  -->
+  <node name = "robot_state_publisher" pkg = "robot_state_publisher" type = "robot_state_publisher"  output="screen" >
+      <param name="publish_frequency" type="double" value="50.0" />
+  </node>
+	
+
+	
+  <include file="$(find 4ws_car)/launch/display_rviz.launch">
+  </include>
+</launch>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find 4ws_car)/urdf/suspension/suspension.transmission.xacro"/>
+  <xacro:include filename="$(find 4ws_car)/urdf/suspension/suspension.gazebo.xacro"/>
+  
+  <xacro:macro name="steering_v0" params="prefix parent *joint_origin *joint_axis">
+	<joint name="${prefix}_steering_joint" type="revolute">
+	  <xacro:insert_block name="joint_origin"/>
+	  <parent link="${parent}"/>
+	  <child link="${prefix}_steering_link"/>
+          <limit effort="500" velocity="6.28"  lower="-2.35" upper="2.35" />
+          <xacro:insert_block name="joint_axis"/>
+	</joint>
+
+	<link name="${prefix}_steering_link">
+	  <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.937254901960784 0.137254901960784 1" />
+      </material>
+    </visual>
+	  <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo1_Link.STL" />
+      </geometry>
+    </collision>
+	  <inertial>
+      <origin
+        xyz="-9.4226089708549E-08 -7.7289110667067E-09 -0.261240451567178"
+        rpy="0 0 0" />
+      <mass
+        value="5.76104203269671" />
+      <inertia
+        ixx="0.165423317373878"
+        ixy="-0.000290653748056503"
+        ixz="2.05751618583053E-08"
+        iyy="0.168942946694181"
+        iyz="1.6876811328859E-09"
+        izz="0.0219170046809726" />
+    </inertial>
+	</link>
+  </xacro:macro>
+  
+</robot>

@@ -1,0 +1,18 @@
+<package>
+  <description brief="mavlink_ros">
+
+     mavlink_ros
+
+  </description>
+  <author>Lorenz Meier, Petri Tanskanen, Lionel Heng</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/mavlink_ros</url>
+  <depend package="geometry_msgs"/>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+

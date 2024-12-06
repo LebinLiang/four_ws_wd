@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find 4ws_car)/urdf/wheel/wheel.transmission.xacro"/>
+  <xacro:include filename="$(find 4ws_car)/urdf/wheel/wheel.gazebo.xacro"/>
+  
+  <xacro:macro name="wheel_v0" params="prefix parent *joint_origin *joint_axis">
+	<joint name="${prefix}_wheel_joint" type="continuous">
+	  <xacro:insert_block name="joint_origin"/>
+	  <parent link="${parent}"/>
+	  <child link="${prefix}_wheel_link"/>
+         <limit effort="100" velocity="20"/>
+	  <xacro:insert_block name="joint_axis"/>
+	</joint>
+
+	<link name="${prefix}_wheel_link">
+	<visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+<collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel1_Link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin
+        xyz="-0.00204376541036855 0.0249163204134835 3.33066907387547E-16"
+        rpy="0 0 0" />
+      <mass
+        value="8.92241380394137" />
+      <inertia
+        ixx="0.268708994377447"
+        ixy="-0.0214473570079771"
+        ixz="9.39147780268202E-17"
+        iyy="0.528422647041607"
+        iyz="-1.07533479631894E-17"
+        izz="0.266949771279124" />
+    </inertial>
+	</link>
+  </xacro:macro>
+  
+</robot>
+

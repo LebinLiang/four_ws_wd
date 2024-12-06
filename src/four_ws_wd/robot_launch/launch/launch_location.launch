@@ -1,0 +1,9 @@
+<launch>
+
+  <include file="$(find nmea_navsat_driver)/launch/nmea_serial_driver.launch" />
+  <include file="$(find sensor_imu)/launch/sensor_imu.launch" />
+  <include file="$(find gps_common)/launch/utm_translator.launch" />
+  
+  
+</launch>
+

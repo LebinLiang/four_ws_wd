@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="taurus_control" type="fourws_motion_solve" name="fourws_motion_solve" output="screen">
+  </node>
+
+  <!--include file="$(find twist_keyboard)/launch/twist_keyboard.launch"/-->
+
+</launch>

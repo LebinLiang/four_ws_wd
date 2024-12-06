@@ -1,0 +1,8 @@
+<launch>
+
+  
+  <include file="$(find sensor_imu)/launch/imu_simulation.launch" />
+  <include file="$(find gps_common)/launch/utm_translator_simulation.launch" />
+  
+</launch>
+

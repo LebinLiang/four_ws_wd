@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="4ws_car">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 -1.14491749414469E-16 1.39011762435083"
+        rpy="0 0 0" />
+      <mass
+        value="713.808628330588" />
+      <inertia
+        ixx="142.749183568638"
+        ixy="-2.3435707584632E-14"
+        ixz="9.18848514806818E-16"
+        iyy="189.782092071795"
+        iyz="4.07823401388039E-15"
+        izz="305.777739647351" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Servo1_Link">
+    <inertial>
+      <origin
+        xyz="-9.4226089708549E-08 -7.7289110667067E-09 -0.261240451567178"
+        rpy="0 0 0" />
+      <mass
+        value="5.76104203269671" />
+      <inertia
+        ixx="0.165423317373878"
+        ixy="-0.000290653748056503"
+        ixz="2.05751618583053E-08"
+        iyy="0.168942946694181"
+        iyz="1.6876811328859E-09"
+        izz="0.0219170046809726" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.937254901960784 0.137254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Servo1_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.8 -0.685 0.81"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Servo1_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wheel1_Link">
+    <inertial>
+      <origin
+        xyz="-0.00204376541036855 0.0249163204134835 3.33066907387547E-16"
+        rpy="0 0 0" />
+      <mass
+        value="8.92241380394137" />
+      <inertia
+        ixx="0.268708994377447"
+        ixy="-0.0214473570079771"
+        ixz="9.39147780268202E-17"
+        iyy="0.528422647041607"
+        iyz="-1.07533479631894E-17"
+        izz="0.266949771279124" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel1_Joint"
+    type="continuous">
+    <origin
+      xyz="0.0020437 -0.024916 -0.48"
+      rpy="0 0 0" />
+    <parent
+      link="Servo1_Link" />
+    <child
+      link="Wheel1_Link" />
+    <axis
+      xyz="0.081751 -0.99665 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Servo2_Link">
+    <inertial>
+      <origin
+        xyz="-9.44418971915439E-08 -4.36120239921678E-09 -0.261240451567178"
+        rpy="0 0 0" />
+      <mass
+        value="5.76104203269672" />
+      <inertia
+        ixx="0.16540706745021"
+        ixy="-0.00016438319087837"
+        ixz="2.06222855137653E-08"
+        iyy="0.16895919661785"
+        iyz="9.52309988531046E-10"
+        izz="0.0219170046809726" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.937254901960784 0.137254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Servo2_Joint"
+    type="revolute">
+    <origin
+      xyz="0.8 -0.685 0.81"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Servo2_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wheel2_Link">
+    <inertial>
+      <origin
+        xyz="-0.00115323811859469 0.0249733866714513 0"
+        rpy="0 0 0" />
+      <mass
+        value="8.92241380394136" />
+      <inertia
+        ixx="0.267509911562919"
+        ixy="-0.0121298452349342"
+        ixz="2.15366809792555E-15"
+        iyy="0.529621729856135"
+        iyz="1.00201959716932E-16"
+        izz="0.266949771279123" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel2_Joint"
+    type="continuous">
+    <origin
+      xyz="0.0011532 -0.024973 -0.48"
+      rpy="0 0 0" />
+    <parent
+      link="Servo2_Link" />
+    <child
+      link="Wheel2_Link" />
+    <axis
+      xyz="0.04613 -0.99894 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Servo3_Link">
+    <inertial>
+      <origin
+        xyz="9.45311227074086E-08 1.46932244149411E-09 -0.261240451567178"
+        rpy="0 0 0" />
+      <mass
+        value="5.76104203269671" />
+      <inertia
+        ixx="0.165400338080617"
+        ixy="-5.54342765612992E-05"
+        ixz="-2.06417686871506E-08"
+        iyy="0.168965925987443"
+        iyz="-3.20840534548852E-10"
+        izz="0.0219170046809726" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.937254901960784 0.137254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Servo3_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.8 0.685 0.81"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Servo3_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wheel3_Link">
+    <inertial>
+      <origin
+        xyz="0.00038853473836864 -0.02499698063281 1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="8.92241380394138" />
+      <inertia
+        ixx="0.267013350988489"
+        ixy="-0.00409049849808934"
+        ixz="8.3696781356075E-16"
+        iyy="0.530118290430566"
+        iyz="3.65243667424319E-17"
+        izz="0.266949771279124" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel3_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.00038845 0.024997 -0.48"
+      rpy="0 0 0" />
+    <parent
+      link="Servo3_Link" />
+    <child
+      link="Wheel3_Link" />
+    <axis
+      xyz="-0.015541 0.99988 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Servo4_Link">
+    <inertial>
+      <origin
+        xyz="9.4505024805791E-08 2.66314448271743E-09 -0.261240451567178"
+        rpy="0 0 0" />
+      <mass
+        value="5.76104203269671" />
+      <inertia
+        ixx="0.165402307033939"
+        ixy="-0.000100446793851732"
+        ixz="-2.06360700034926E-08"
+        iyy="0.168963957034121"
+        iyz="-5.8152290789985E-10"
+        izz="0.0219170046809726" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.937254901960784 0.137254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Servo4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Servo4_Joint"
+    type="revolute">
+    <origin
+      xyz="0.8 0.685 0.81"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Servo4_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wheel4_Link">
+    <inertial>
+      <origin
+        xyz="-0.000704218556082159 0.0249900795562014 -3.33066907387547E-16"
+        rpy="0 0 0" />
+      <mass
+        value="8.92241380394138" />
+      <inertia
+        ixx="0.26715864016888"
+        ixy="-0.00741197477221588"
+        ixz="-9.23580406576071E-16"
+        iyy="0.52997300125018"
+        iyz="-3.47468279843719E-18"
+        izz="0.26694977127912" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/Wheel4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel4_Joint"
+    type="continuous">
+    <origin
+      xyz="0.0007043 -0.02499 -0.48"
+      rpy="0 0 0" />
+    <parent
+      link="Servo4_Link" />
+    <child
+      link="Wheel4_Link" />
+    <axis
+      xyz="-0.028169 0.9996 0" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="GPS_Link">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 -4.33680868994202E-18 0.116570026776398"
+        rpy="0 0 0" />
+      <mass
+        value="1.33905058617666" />
+      <inertia
+        ixx="0.00575508466631021"
+        ixy="-1.98433233899372E-20"
+        ixz="-5.99550861340591E-19"
+        iyy="0.00575508466631021"
+        iyz="-1.8945290434225E-19"
+        izz="0.00440925833255496" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/GPS_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/GPS_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="GPS_Joint"
+    type="fixed">
+    <origin
+      xyz="0.1 0 1.57"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="GPS_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="IMU_Link">
+    <inertial>
+      <origin
+        xyz="0 8.67361737988404E-19 0.007773242603065"
+        rpy="0 0 0" />
+      <mass
+        value="0.0242226636759993" />
+      <inertia
+        ixx="3.20239146668551E-06"
+        ixy="4.71751443096649E-22"
+        ixz="2.94712986740203E-22"
+        iyy="4.12982553624142E-06"
+        iyz="-3.1026816834536E-22"
+        izz="6.10892771029758E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/IMU_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4ws_car/meshes/IMU_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="IMU_Joint"
+    type="fixed">
+    <origin
+      xyz="0.27435 0 1.57"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="IMU_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<robot name="fourth_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:property name="M_PI" value="3.14159274"/>
+
+  <xacro:include filename="$(find 4ws_car)/urdf/base/base.urdf.xacro"/>
+  <xacro:include filename="$(find 4ws_car)/urdf/suspension/suspension.urdf.xacro"/>
+  <xacro:include filename="$(find 4ws_car)/urdf/wheel/wheel.urdf.xacro"/>
+  <xacro:include filename="$(find 4ws_car)/urdf/sensor/imu/imu.urdf.xacro"/>
+  <xacro:include filename="$(find 4ws_car)/urdf/sensor/gps/gps.urdf.xacro"/>
+
+  <!-- =============== Link & Joint =============== -->
+  <!-- Base -->
+  <link name="base_footprint"/>
+  <xacro:base_v0 parent="base_footprint">
+	<origin xyz="0 0 0"/>
+  </xacro:base_v0>
+  <!-- IMU -->
+  <xacro:imu_v0 prefix="imu" parent="base_link">
+	<origin xyz="0.27435 0 1.57" rpy="0 0 0" />
+  </xacro:imu_v0>
+  <!-- GPS -->
+  <xacro:gps_v0 prefix="gps" parent="base_link">
+	<origin xyz="0.1 0 1.57" rpy="0 0 0" />
+  </xacro:gps_v0>
+  <!-- Suspension -->
+  <!-- Front Right Sus -->
+  <xacro:steering_v0 prefix="rr" parent="base_link">
+	<origin xyz="-0.8 -0.685 0.81"/>
+	<axis xyz="0 0 1"/>
+  </xacro:steering_v0>
+  <!-- Front Left Sus -->
+  <xacro:steering_v0 prefix="rl" parent="base_link">
+	<origin xyz="-0.8 0.685 0.81"/>
+	<axis xyz="0 0 1"/>
+  </xacro:steering_v0>
+  <!-- Rear Right Sus -->
+  <xacro:steering_v0 prefix="fr" parent="base_link">
+	<origin xyz="0.8 -0.685 0.81"/>
+	<axis xyz="0 0 1"/>
+  </xacro:steering_v0>
+  <!-- Rear Left Sus -->
+  <xacro:steering_v0 prefix="fl" parent="base_link">
+	<origin xyz="0.8 0.685 0.81"/>
+	<axis xyz="0 0 1"/>
+  </xacro:steering_v0>
+
+  <!-- Wheel -->
+  <!-- Front Right Wheel -->
+  <xacro:wheel_v0 prefix="rr" parent="fr_steering_link">
+	<origin xyz="0.0020437 -0.024916 -0.48"/>
+	<axis xyz="0.081751 -0.99665 0"/>
+  </xacro:wheel_v0>
+  <!--  Front Left Wheel -->
+  <xacro:wheel_v0 prefix="rl" parent="fl_steering_link">
+	<origin xyz="-0.00038845 0.024997 -0.48" rpy="0 0 ${M_PI}"/>
+	<axis xyz="-0.081751 0.99665 0"/>
+  </xacro:wheel_v0>
+  <!-- Rear Right Wheel -->
+  <xacro:wheel_v0 prefix="fr" parent="rr_steering_link">
+	<origin xyz="0.0011532 -0.024973 -0.48"/>
+	<axis xyz="0.081751 -0.99665 0"/>
+  </xacro:wheel_v0>
+  <!--  Rear Left Wheel -->
+  <xacro:wheel_v0 prefix="fl" parent="rl_steering_link">
+	<origin xyz="-0.0020437 0.024916 -0.48" rpy="0 0 ${M_PI}"/>
+	<axis xyz="-0.081751 0.99665 0"/>
+  </xacro:wheel_v0>
+
+  <!-- ===============  Wheel Transmission =============== -->
+  <xacro:wheel_trans_v0 prefix="fr"/>
+  <xacro:wheel_trans_v0 prefix="fl"/>
+  <xacro:wheel_trans_v0 prefix="rr"/>
+  <xacro:wheel_trans_v0 prefix="rl"/>
+  
+
+  <!-- ===============  Steering Transmission =============== -->
+  <xacro:steering_trans_v0 prefix="fr"/>
+  <xacro:steering_trans_v0 prefix="fl"/>
+  <xacro:steering_trans_v0 prefix="rr"/>
+  <xacro:steering_trans_v0 prefix="rl"/>
+
+  <!-- =============== Gazebo =============== -->
+ 
+   <gazebo>  
+   <plugin name="gps" filename="libhector_gazebo_ros_gps.so">  
+  	<updateRate>10.0</updateRate>  
+         <topicName>fix</topicName>  
+         <gaussianNoise>0.0 0.0 0.0</gaussianNoise>  
+         <offset>0 0 0</offset>  
+         <velocityGaussianNoise>0 0 0</velocityGaussianNoise>  
+         <frameId>base_link</frameId>  
+         </plugin>  
+   </gazebo>  
+
+   <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/4ws</robotNamespace>
+    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+  <!-- Base -->
+  <xacro:base_gazebo_v0/>
+
+  <!-- IMU -->
+  <xacro:imu_gazebo_v0 prefix = "imu"/>
+
+  <!-- Wheel -->
+  <xacro:wheel_gazebo_v0 prefix="fr"/>
+  <xacro:wheel_gazebo_v0 prefix="fl"/>
+  <xacro:wheel_gazebo_v0 prefix="rr"/>
+  <xacro:wheel_gazebo_v0 prefix="rl"/>
+
+  <!-- Steering -->
+  <xacro:steering_gazebo_v0 prefix="fr"/>
+  <xacro:steering_gazebo_v0 prefix="fl"/>
+  <xacro:steering_gazebo_v0 prefix="rr"/>
+  <xacro:steering_gazebo_v0 prefix="rl"/>
+
+</robot>

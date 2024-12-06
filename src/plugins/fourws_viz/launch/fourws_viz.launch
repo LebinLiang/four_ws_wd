@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="fourws_viz" type="fourws_viz" name="fourws_viz" output="screen">
+    </node>
+</launch>

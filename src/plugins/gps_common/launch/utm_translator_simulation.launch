@@ -1,0 +1,12 @@
+<launch>
+
+
+
+  <node name="utm_odometry_tf_node" pkg="gps_common" type="utm_odometry_tf_node" output="screen">
+</node>
+  <node name="imu_gps_location" pkg="gps_common" type="imu_gps_location_simulate.py" output="screen">
+  </node>
+  
+  
+</launch>
+

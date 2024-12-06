@@ -1,0 +1,8 @@
+<launch>
+    <node name="mavlink_ros_serial" pkg="mavlink_ros" type="mavlink_ros_serial" clear_params="true" output="screen"/>
+    
+    <node name="mavlink_station" pkg="mavlink_ros" type="mavlink_station" output="screen"/>
+    
+
+</launch>
+
