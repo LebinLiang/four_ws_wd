@@ -226,12 +226,7 @@ Odometry Data (origin at the starting point): /odom
 If you found our work useful, please do cite us!
 
 ```
-@article{dorbala2023can,
-  title={Can an Embodied Agent Find Your" Cat-shaped Mug"? LLM-Based Zero-Shot Object Navigation},
-  author={Dorbala, Vishnu Sashank and Mullen Jr, James F and Manocha, Dinesh},
-  journal={arXiv preprint arXiv:2303.03480},
-  year={2023}
-}
+
 ```
 
 
