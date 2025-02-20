@@ -6,7 +6,7 @@ This repo contains code for our paper -
 
 ## Overview
 
-[![Overview]](https://github.com/LebinLiang/four_ws_wd/blob/main/image/framework.png)
+[![Overview]](image/framework.png)
 
 
 ## Video
