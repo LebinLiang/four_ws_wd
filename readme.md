@@ -1,8 +1,6 @@
 # An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics 
 
-This repo contains code for our paper - 
-#### [**An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics**]
-*Lebin Liang, Dewei Lu, Yushun Tao, Dong Li, Can Wang and Xinyu Wu*
+This repo contains code for our paper "An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics", *Lebin Liang, Dewei Lu, Yushun Tao, Dong Li, Can Wang and Xinyu Wu*
 
 ## Overview
 
