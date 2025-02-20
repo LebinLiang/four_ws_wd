@@ -1,16 +1,16 @@
-# 4WS-4WD Field Autonomous Navigation Robot System Based on Arbitrary Instantaneous Center Kinematic Model 
+# An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics 
 
 This repo contains code for our paper - 
-#### [**4WS-4WD Field Autonomous Navigation Robot System Based on Arbitrary Instantaneous Center Kinematic Model**]
-*Lebin Liang*
+#### [**An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics**]
+*Lebin Liang, Dewei Lu, Yushun Tao, Dong Li, Can Wang and Xinyu Wu*
 
 ## Overview
 
-
+[![Overview]](https://github.com/LebinLiang/four_ws_wd/blob/main/image/framework.png)
 
 
 ## Video
-[![](https://i.ytimg.com/vi/HbzG5KW3qyo/maxresdefault.jpg)](https://www.youtube.com/watch?v=HbzG5KW3qyo "")
+[![Video](https://i.ytimg.com/vi/HbzG5KW3qyo/maxresdefault.jpg)](https://www.youtube.com/watch?v=HbzG5KW3qyo "")
 
 
 ## Abstract
