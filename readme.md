@@ -6,7 +6,7 @@ This repo contains code for our paper -
 
 ## Overview
 
-[![Overview]](image/framework.png)
+![Overview](image/framework.png)
 
 
 ## Video
