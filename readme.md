@@ -1,6 +1,6 @@
 # An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics 
 
-This repo contains code for our paper "An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics", *Lebin Liang, Dewei Lu, Yushun Tao, Dong Li, Can Wang and Xinyu Wu*
+This repo contains code for our paper "An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics", *Lebin Liang, Dewei Lu, Yushun Tao, Dong Li, Can Wang and Xinyu Wu*.
 
 ## Overview
 
@@ -204,9 +204,11 @@ Odometry Data (origin at the starting point): /odom
 4. **4WS Parm:** `/4ws`
 5. **IMU YAW:** `/imu/imu_yaw`
 
-### Thanks
+## Acknowledgement
 
 * https://github.com/Romea/romea_controllers
+
+## Citing
 
 If you found our work useful, please do cite us!
 
