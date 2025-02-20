@@ -8,26 +8,13 @@ This repo contains code for our paper -
 
 
 
+
+## Video
+[![](https://i.ytimg.com/vi/HbzG5KW3qyo/maxresdefault.jpg)](https://www.youtube.com/watch?v=HbzG5KW3qyo "")
+
+
 ## Abstract
-*Autonomous navigation in complex outdoor envi-
-ronments, particularly in agricultural applications, is crucial for
-enhancing operational efficiency and reducing labor demands.
-Traditional robot chassis systems, such as Ackermann steering
-and differential drive, are limited by restricted maneuverability
-and poor terrain adaptability. This study presents an autonomous
-navigation system for a 4-wheel steering and 4-wheel driving
-(4WS-4WD) field robot, establishing an arbitrary instantaneous
-center of motion (ICM) kinematic model to improve mobility and
-terrain adaptability. By integrating a GNSS-RTK receiver, an
-onboard IMU, and real-time steering angle encoders, the system
-achieves high-precision localization and orientation feedback. The
-motion controller based on the ICM model ensures accurate
-path tracking and maneuverability. The system design includes
-both simulation-based algorithm validation and hardware de-
-ployment, with evaluation performed using reference trajectories.
-Experimental results validate the robustness and effectiveness of
-the system, demonstrating high precision in path tracking and
-reliable performance in real-world agricultural operations.*
+*Autonomous navigation in complex outdoor environments is essential for improving efficiency and reducing labor demands in agricultural applications. We presents an open-source 4-wheel steering and 4-wheel drive (4WS-4WD) agricultural autonomous navigation robot platform designed to address the maneuverability and terrain adaptability limitations of conventional robots. By using an omni-directional kinematic model, the system enhances mobility and terrain adaptability in agricultural environments. The system achieves high-precision localization and orientation feedback by integrating a GNSS-RTK receiver, an onboard IMU, and real-time steering angle encoders. The motion controller based on the omni-directional kinematic model ensures precise path tracking and excellent maneuverability. The system's performance is validated through both simulation and real-world deployment, evaluated using reference trajectories. Experimental results demonstrate the system's robustness and efficiency, achieving high-precision path tracking and reliable performance in real-world agricultural applications. All open-source materials, including CAD drawings, circuit boards, and code, can be accessed at the following repository: https://github.com/LebinLiang/four_ws_wd/tree/main*
 
 
 ## Installation 
