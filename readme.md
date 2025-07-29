@@ -2,15 +2,12 @@
 
 This repo contains code for our paper - 
 #### [**An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics**]
-*Lebin Liang, Dewei Lu, Yushun Tao, Dong Li, Can Wang and Xinyu Wu*
+*	Lebin Liang, Dewei Lu, Dong Li, Zilong Chen, Can Wang and Xinyu Wu*
 
 ## Overview
 
 ![Overview](image/framework.png)
 
-
-## Video
-[![Video](https://i.ytimg.com/vi/HbzG5KW3qyo/maxresdefault.jpg)](https://www.youtube.com/watch?v=HbzG5KW3qyo "")
 
 
 ## Abstract
