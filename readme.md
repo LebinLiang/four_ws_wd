@@ -1,18 +1,7 @@
-# An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics 
-
-This repo contains code for our paper - 
-#### [**An Open-Source Platform for Autonomous Navigation of 4WS-4WD Agricultural Robots with Omni-Directional Kinematics**]
-*	Lebin Liang, Dewei Lu, Dong Li, Zilong Chen, Can Wang and Xinyu Wu*
 
 ## Overview
 
 ![Overview](image/framework.png)
-
-
-
-## Abstract
-*Autonomous navigation in complex outdoor environments is essential for improving efficiency and reducing labor demands in agricultural applications. We presents an open-source 4-wheel steering and 4-wheel drive (4WS-4WD) agricultural autonomous navigation robot platform designed to address the maneuverability and terrain adaptability limitations of conventional robots. By using an omni-directional kinematic model, the system enhances mobility and terrain adaptability in agricultural environments. The system achieves high-precision localization and orientation feedback by integrating a GNSS-RTK receiver, an onboard IMU, and real-time steering angle encoders. The motion controller based on the omni-directional kinematic model ensures precise path tracking and excellent maneuverability. The system's performance is validated through both simulation and real-world deployment, evaluated using reference trajectories. Experimental results demonstrate the system's robustness and efficiency, achieving high-precision path tracking and reliable performance in real-world agricultural applications. All open-source materials, including CAD drawings, circuit boards, and code, can be accessed at the following repository: https://github.com/LebinLiang/four_ws_wd/tree/main*
-
 
 ## Installation 
 
