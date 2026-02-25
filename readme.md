@@ -210,6 +210,16 @@ Odometry Data (origin at the starting point): /odom
 If you found our work useful, please do cite us!
 
 ```
+@INPROCEEDINGS{11377803,
+  author={Liang, Lebin and Lu, Dewei and Li, Dong and Chen, Zilong and Liu, Shucun and Wang, Can and Wu, Xinyu},
+  booktitle={2025 IEEE International Conference on Robotics and Biomimetics (ROBIO)}, 
+  title={A Biomimetic 4WS–4WD Robotic Platform with Single-Neuron PID Control for Autonomous Field Navigation}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={829-835},
+  keywords={Solid modeling;PI control;Trajectory tracking;Navigation;Biomimetics;Biological system modeling;Kinematics;PD control;Tuning;Tendons},
+  doi={10.1109/ROBIO66223.2025.11377803}}
 
 ```
 
